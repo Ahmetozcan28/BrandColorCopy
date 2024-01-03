@@ -67,3 +67,70 @@ html,body {
   }
 }
 
+
+.about-modal {
+max-width: 720px;
+background: #fff;
+padding: 50px;
+box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+border-radius: 5px;
+position: relative;
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    background-color: #ddd;
+    width: 40px;
+    height: 40px;
+    transition: 300ms ease-in-out all;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    cursor: pointer;
+    &:hover {
+      background-color: #999;
+      svg {
+        color: #fff;
+      }
+    }
+
+}
+ h3 {
+    margin-bottom: 25px;
+    font-size: 25px;
+ }
+
+ p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    color: #999;
+    cursor: pointer;
+    &:hover {
+      color: #000;
+    }
+ }
+}
+
+.about-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(#fff, 0.8);
+}
