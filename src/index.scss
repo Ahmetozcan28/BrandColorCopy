@@ -1,17 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 * {
   padding: 0;
@@ -22,14 +20,14 @@ code {
   outline: 0;
 }
 
-html,body {
+html,
+body {
   height: 100%;
 }
 #root {
   height: 100%;
   display: flex;
 }
-
 
 .sidebar {
   width: 320px;
@@ -59,7 +57,7 @@ html,body {
           text-decoration: none;
           cursor: pointer;
           &:hover {
-            color: #000;
+            color: #0099e5;
           }
         }
       }
@@ -67,15 +65,14 @@ html,body {
   }
 }
 
-
 .about-modal {
-max-width: 720px;
-background: #fff;
-padding: 50px;
-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-border-radius: 5px;
-position: relative;
-.close-modal-btn {
+  max-width: 720px;
+  background: #fff;
+  padding: 50px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  .close-modal-btn {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -88,7 +85,7 @@ position: relative;
       width: 20px;
       height: 20px;
     }
-    
+
     cursor: pointer;
     &:hover {
       background-color: #999;
@@ -96,14 +93,13 @@ position: relative;
         color: #fff;
       }
     }
-
-}
- h3 {
+  }
+  h3 {
     margin-bottom: 25px;
     font-size: 25px;
- }
+  }
 
- p {
+  p {
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 1.7;
@@ -119,7 +115,7 @@ position: relative;
     &:hover {
       color: #000;
     }
- }
+  }
 }
 
 .about-modal-overlay {
@@ -133,4 +129,106 @@ position: relative;
   justify-content: center;
   align-items: center;
   background-color: rgba(#fff, 0.8);
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  background: #f8f8f8;
+  .header {
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    position: sticky;
+    top: 0;
+    .search {
+      flex: 1;
+      position: relative;
+      .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 20px;
+          height: 20px;
+          color: #999;
+        }
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        padding: 0px 20px 0px 60px;
+        &:focus {
+          border-color: #0099e5;
+        }
+      }
+    }
+  }
+}
+
+.brand {
+  padding: 25px;
+  .brands {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    h5 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+  .brand-colors {
+    display: flex;
+    span {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 500;
+      text-indent: -9999px;
+      width: 70px;
+      margin: 0 5px;
+    }
+  }
+}
+.active {
+  .brand-colors {
+    span {
+      flex: 1;
+      text-indent: 0;
+      .copy-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.copy-icon {
+  display: none;
+
+}
+
+.brand-color:hover {
+  .copy-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+
+  }
+}
+.copied {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 15px 25px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
