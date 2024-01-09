@@ -15,7 +15,7 @@ export default function Brand({ brand }) {
       setSelectedBrand([...selectedBrand, brand.slug]);
     }
   };
-
+  
   const setColor = (color) => {
     setCopied(color);
   };

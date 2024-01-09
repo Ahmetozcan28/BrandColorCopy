@@ -23,7 +23,6 @@ function App() {
     setCopied,
     setSearch,
   };
-
   useEffect(() => {
     const filteredBrand = brandsArray.filter((brand) =>
       brand.title.toLowerCase().includes(search.toLowerCase())
@@ -31,9 +30,8 @@ function App() {
     setBrands(filteredBrand);
   }, [search]);
 
-
   useEffect(() => {
-    console.log(selectedBrand);
+
   }, [selectedBrand]);
 
   useEffect(() => {

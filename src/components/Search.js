@@ -15,6 +15,7 @@ export default function Search() {
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search Brands"
       />
+     
     </div>
   );
 }

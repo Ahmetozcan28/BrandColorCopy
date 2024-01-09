@@ -140,6 +140,8 @@ body {
     border-bottom: 1px solid #ccc;
     display: flex;
     position: sticky;
+    background: #fff;
+    align-items: center;
     top: 0;
     .search {
       flex: 1;
@@ -200,6 +202,7 @@ body {
   }
 }
 .active {
+  border-color: #34bf49 !important;
   .brand-colors {
     span {
       flex: 1;
@@ -213,7 +216,6 @@ body {
 
 .copy-icon {
   display: none;
-
 }
 
 .brand-color:hover {
@@ -221,7 +223,6 @@ body {
     display: block;
     width: 25px;
     height: 25px;
-
   }
 }
 .copied {
@@ -231,4 +232,58 @@ body {
   padding: 15px 25px;
   border: 1px solid #ddd;
   border-radius: 5px;
+}
+.download {
+  display: flex;
+  padding-right: 30px;
+}
+.selected {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+  &:hover {
+    color: #252323;
+  }
+  cursor: pointer;
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+}
+.action {
+  display: flex;
+  align-items: center;
+  a,
+  button {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      width: 18px;
+      height: 18px;
+      color: #999;
+      &:hover {
+        color: #252323;
+      }
+    }
+  }
+}
+
+.select-css {
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover {
+    color: #252323;
+  }
+  option {
+    color: #252323;
+  }
 }
