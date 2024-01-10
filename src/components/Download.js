@@ -64,18 +64,19 @@ export default function Download() {
         <a download={`brand.${cssMethod}`} href={downloadUrl}>
           <GrLinkBottom />
         </a>
+        <select
+          className="select-css"
+          onChange={(e) => setCssMethod(e.target.value)}
+        >
+          <option value="css">CSS</option>
+          <option value="scss">SCSS</option>
+          <option value="less">LESS</option>
+        </select>
         <button onClick={getLink}>
           <GrLink />
         </button>
       </div>
-      <select
-        className="select-css"
-        onChange={(e) => setCssMethod(e.target.value)}
-      >
-        <option value="css">CSS</option>
-        <option value="scss">SCSS</option>
-        <option value="less">LESS</option>
-      </select>
+
       <div className="selected" onClick={() => setSelectedBrand([])}>
         <GrClose />
         {selectedBrand.length} brands collected
