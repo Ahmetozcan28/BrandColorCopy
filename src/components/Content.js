@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "./Search";
 import Brand from "./Brand";
+import Loader from "./Loader";
 import MainContext from "../MainContext";
 import { useContext } from "react";
 import LazyLoad from "react-lazyload";
@@ -20,7 +21,7 @@ export default function Content() {
             key={key}
             overflow={true}
             once={true}
-            placeholder="Yükleniyorr"
+            placeholder={<Loader />}
           >
             <Brand key={key} brand={brand} />
           </LazyLoad>

@@ -1,4 +1,5 @@
 import React, { useEffect, useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import MainContext from "../MainContext";
 import { GrLink, GrLinkBottom, GrClose } from "react-icons/gr";
 
@@ -50,14 +51,6 @@ export default function Download() {
     }
   }, [selectedBrand, cssMethod]);
 
-  const getLink = () => {
-    const link = selectedBrand.join(",");
-    prompt(
-      "Here is the URL to share",
-      `http://localhost:3000/collection/${link}`
-    );
-  };
-
   return (
     <div className="download">
       <div className="action">
@@ -73,9 +66,9 @@ export default function Download() {
           <GrLinkBottom />
         </a>
 
-        <button onClick={getLink}>
+        <Link to={`/collection/${selectedBrand.join(",")}`}>
           <GrLink />
-        </button>
+        </Link>
       </div>
 
       <div className="selected" onClick={() => setSelectedBrand([])}>

@@ -5,6 +5,8 @@ import LazyLoad from "react-lazyload";
 import { useContext } from "react";
 import MainContext from "../MainContext";
 import Download from "./Download";
+import { GrFormPreviousLink } from "react-icons/gr";
+
 export default function Collections() {
   const { setSelectedBrand, brands, selectedBrand } = useContext(MainContext);
   const { slugs } = useParams();
@@ -35,7 +37,9 @@ export default function Collections() {
             cursor: "pointer",
           }}
           onClick={clearBrands}
+          className="back"
         >
+          <GrFormPreviousLink />
           All brands
         </a>
         {selectedBrand.length > 0 && <Download />}
