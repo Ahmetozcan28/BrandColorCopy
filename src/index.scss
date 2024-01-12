@@ -263,6 +263,7 @@ body {
     height: 30px;
     display: flex;
     align-items: center;
+    margin-right: 3px;
     cursor: pointer;
     svg {
       width: 18px;
@@ -276,9 +277,10 @@ body {
 }
 
 .select-css {
-  margin-right: 7px;
+  margin-right: 10px;
   appearance: none;
   background-color: #eee;
+  color: #999;
   padding: 5px 8px;
   border-radius: 5px;
   font-size: 14px;

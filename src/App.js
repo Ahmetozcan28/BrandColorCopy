@@ -4,7 +4,9 @@ import "./App.css";
 import MainContext from "./MainContext";
 import Copied from "./Copied";
 import Content from "./components/Content";
+import Collections from "./components/Collections";
 import Sidebar from "./components/Sidebar";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 function App() {
   const brandsArray = [];
 
@@ -30,9 +32,7 @@ function App() {
     setBrands(filteredBrand);
   }, [search]);
 
-  useEffect(() => {
-
-  }, [selectedBrand]);
+  useEffect(() => {}, [selectedBrand]);
 
   useEffect(() => {
     const timeOut = setTimeout(() => {
@@ -45,7 +45,12 @@ function App() {
       <MainContext.Provider value={data}>
         {copied && <Copied color={copied} />}
         <Sidebar />
-        <Content />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Content />} />
+            <Route path="/collection/:slugs" element={<Collections />} />
+          </Routes>
+        </Router>
       </MainContext.Provider>
     </>
   );
